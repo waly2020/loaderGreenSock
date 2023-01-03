@@ -50,3 +50,19 @@ gsap.to(".lettre",
         },
     }
 )
+gsap.to(".lettre",
+    {
+        duration: 3,
+        delay: 1,
+        // y: 2,
+        // color: "#555",
+        // rotate: 3,
+        opacity: 0,
+        delay: delai + 5,
+        stagger: {
+            each: .7,
+            yoyo: true,
+            repeat: -1,
+        },
+    }
+)
