@@ -1,16 +1,40 @@
+const trY = 30;
+const time = 0.6;
+const direction = "start";
+const delai = (0.23 * 15) + 1;
 gsap.to(".cercle",
     {
-        duration: 1,
-        background: "orange",
-        boxShadow: "0 0 20px rgba(245, 229, 5, 0.459)",
-        delay: (0.23 * 15) + 1,
+        duration: time,
+        y: -(trY),
+        delay: delai,
         scale: 1,
         stagger: {
             each: .3,
             repeat: -1,
             yoyo: true,
-            // from : "start",
+            from: direction,
         },
+        onUpdate: () => {
+            document.querySelectorAll(".loader").forEach(item => {
+                item.classList.add("active");
+            })
+        }
+    }
+)
+gsap.to(".shadow",
+    {
+        duration: time,
+        y: trY,
+        opacity: 0,
+        delay: delai,
+        scale: 1,
+        stagger: {
+            each: .3,
+            repeat: -1,
+            yoyo: true,
+            from: direction,
+        },
+
     }
 )
 gsap.to(".lettre",

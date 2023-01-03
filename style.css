@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    /* gap: 40px; */
     background: rgb(18, 18, 18);
 }
 
@@ -22,6 +22,7 @@ h1 {
     font-size: 8vmin;
     color: #ccc;
     text-shadow: 0 0 16px rgba(255, 255, 255, 0.412);
+    margin-bottom: 60px;
     /* overflow-y: hidden; */
 }
 
@@ -35,6 +36,14 @@ h1 {
 .loader {
     display: flex;
     gap: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .5s;
+}
+
+.loader.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .loader>div {
@@ -42,7 +51,11 @@ h1 {
     height: 30px;
     font-size: 8px;
     border-radius: 50%;
-    background: rgb(3, 151, 3);
-    box-shadow: 0 0 20px rgba(5, 245, 5, 0.459);
-    transform: scale(0);
+    background: rgb(230, 230, 230);
+    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.459); */
+    transform: scale(1);
+}
+
+.shadow {
+    opacity: .05;
 }
