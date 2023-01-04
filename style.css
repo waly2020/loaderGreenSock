@@ -21,7 +21,7 @@ body {
 h1 {
     font-size: 8vmin;
     color: #ccc;
-    text-shadow: 0 0 16px rgba(255, 255, 255, 0.412);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.412);
     margin-bottom: 60px;
     /* overflow-y: hidden; */
 }
@@ -52,7 +52,7 @@ h1 {
     font-size: 8px;
     border-radius: 50%;
     background: rgb(230, 230, 230);
-    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.459); */
+    box-shadow: 0 0 27px rgba(255, 255, 255, 0.459);
     transform: scale(1);
 }
 
